@@ -10,12 +10,16 @@
 :root {
     font-size: 62.5%;
 
-    --color-bc-blue: #065E7C;
-    --color-input: rgba(255, 255, 255, 0.20);
+    --color-bc-blue: #065d7a;
+    --color-input: rgba(255, 255, 255, 0.2);
     --color-placeholder: #FFF;
+    --color-h1: #202024;
+    --color-p: #121214;
+    --color-checkbox: #065E7C;
 }
 
-body {
+body,
+input::placeholder {
     font-family: 'Mulish', sans-serif;
 
 }
@@ -78,7 +82,6 @@ header form {
 .input-wrapper input::placeholder {
     text-align: center;
 
-    font-family: 'Mulish', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6rem;
     font-weight: 600;
@@ -91,4 +94,69 @@ header .avatar {
     height: 42px;
 
     border-radius: 50%;
+}
+
+main .capa {
+    width: 100%;
+    border: no
+}
+
+main .container {
+    padding: 3.5rem 2.2rem;
+}
+
+main .container h1 {
+
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.84rem;
+
+    margin-bottom: .8rem;
+
+}
+
+main .container form {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 3.1rem;
+}
+
+.input-checkbox {
+    display: flex;
+
+    position: relative;
+}
+
+.input-checkbox input {
+    width: 3.6rem;
+    height: 3.6rem;
+
+    position: absolute;
+
+    opacity: 0;
+
+}
+
+.input-checkbox img {
+    box-sizing: content-box;
+    background-color: var(--color-checkbox);
+
+    padding: 1.2rem;
+
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.input-checkbox input:checked+img {
+    background-color: black;
+
+}
+
+main .container p {
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.56rem;
+
 }
