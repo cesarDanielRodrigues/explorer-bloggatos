@@ -173,20 +173,34 @@ h1 {
     gap: 3.2rem;
 
 }
+
 .card article {
+    height: min-content;
     display: grid;
-    grid-template-areas: 'img h1'
-                         'img p';
-                        
+    grid-template-areas:
+        'img h1'
+        'img p' ;
+    /* gap: 1.6rem; */
+
+
 }
 
-.card article > img{
-    width: 15.1rem;
+.card article>img {
     grid-area: img;
+    align-self: center;
+    margin-right: 1.6rem;
 }
-.card article > h1{
-    grid-area: h1;
+
+.card article>h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.88rem;
 }
-.card article > p{
-    grid-area: p;
+
+.card article>p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2.24rem;
+
+
 }
