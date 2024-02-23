@@ -102,7 +102,7 @@ main .capa {
 }
 
 main .container {
-    margin: .8rem;
+
     padding: 3.5rem 2.2rem;
 }
 
@@ -162,12 +162,12 @@ main .container p {
 
 }
 
-h1 {
+.card h1 {
     margin-block-start: 3.4rem;
+    border: 1px solid red;
 }
 
 .card {
-    margin-top: 1.2rem;
 
     display: grid;
     gap: 3.2rem;
@@ -175,14 +175,11 @@ h1 {
 }
 
 .card article {
-    height: min-content;
+    
     display: grid;
     grid-template-areas:
         'img h1'
         'img p' ;
-    /* gap: 1.6rem; */
-
-
 }
 
 .card article>img {
@@ -201,6 +198,4 @@ h1 {
     font-size: 14px;
     font-weight: 400;
     line-height: 2.24rem;
-
-
 }
