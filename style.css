@@ -12,16 +12,28 @@
 
     --color-bc-blue: #065d7a;
     --color-input: rgba(255, 255, 255, 0.2);
-    --color-placeholder: #FFF;
-    --color-h1: #202024;
+    --color-text-white: #FFF;
+    --color-text-title: #202024;
     --color-p: #121214;
     --color-checkbox: #065E7C;
+    --color-bc-footer: #387E96;
+
 }
 
 body,
-input::placeholder {
+input {
     font-family: 'Mulish', sans-serif;
 
+}
+
+h1, h2{
+    color: var(--color-text-title);
+}
+
+p, .input-wrapper input {
+    color: var(--color-p);
+    font-size: 1.6rem;
+    line-height: 1.6rem;
 }
 
 #app {
@@ -43,7 +55,6 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 2.5rem;
-
 }
 
 header .logo {
@@ -77,16 +88,19 @@ header form {
 
     background-color: var(--color-input);
 
+    font-weight: 600;
+    color: var(--color-text-white);
 }
 
 .input-wrapper input::placeholder {
     text-align: center;
 
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    font-weight: 600;
-    color: var(--color-placeholder);
+    color: var(--color-text-white);
 
+}
+
+.input-wrapper input:focus {
+    outline: 1px solid var(--color-text-white);
 }
 
 header .avatar {
@@ -102,8 +116,7 @@ main .capa {
 }
 
 main .container {
-
-    padding: 3.5rem 2.2rem;
+    padding: 3.5rem 2.2rem 3.9rem;
 }
 
 main .container h1 {
@@ -151,12 +164,14 @@ main .container form {
 
 .input-checkbox input:checked+img {
     background-color: black;
+}
 
+.input-checkbox input:focus+img {
+    outline: .3rem solid black;
 }
 
 main .container p {
 
-    font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.56rem;
 
@@ -164,7 +179,6 @@ main .container p {
 
 .card h1 {
     margin-block-start: 3.4rem;
-    border: 1px solid red;
 }
 
 .card {
@@ -174,28 +188,41 @@ main .container p {
 
 }
 
-.card article {
-    
+.card a {
+    text-decoration: none;
+    color: var();
+
     display: grid;
     grid-template-areas:
         'img h1'
-        'img p' ;
+        'img p';
 }
 
-.card article>img {
+.card a>img {
     grid-area: img;
     align-self: center;
     margin-right: 1.6rem;
 }
 
-.card article>h2 {
+.card a>h2 {
     font-size: 18px;
     font-weight: 700;
     line-height: 2.88rem;
 }
 
-.card article>p {
+.card a>p {
     font-size: 14px;
     font-weight: 400;
     line-height: 2.24rem;
+}
+
+footer p {
+    background-color: var(--color-bc-footer);
+
+    padding: 2.2rem;
+
+    font-weight: 600;
+    color: var(--color-text-white);
+
+    text-align: center;
 }
