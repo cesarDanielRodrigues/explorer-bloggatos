@@ -125,7 +125,7 @@ main section h1 {
 
 }
 
-main section form {
+main .header-section > form {
     display: flex;
     gap: 1.2rem;
     margin-bottom: 3.1rem;
@@ -187,7 +187,6 @@ article a {
     color: var();
 }
 a > figure{
-
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 1.6rem;
@@ -204,8 +203,8 @@ figure figcaption >h2 {
 
 }
 
-figure figcaption >p {
-    font-size: 14px;
+figure figcaption > .text-article {
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2.24rem;
 }
@@ -218,4 +217,61 @@ footer p {
     color: var(--color-text-white);
 
     text-align: center;
+}
+/* animações */
+header{
+    --inicio:-100%;
+    animation: apper-header 1s; 
+}
+footer{
+    --inicio:100%;
+    animation: apper-header 1s; 
+}
+@keyframes apper-header{
+    from{
+        transform: translateY(var(--inicio));
+    }
+}
+.capa, h1, .input-checkbox, p, a{
+    --time: .2s;
+    animation-name: apper-page;
+    animation-duration: .5s;
+    animation-delay: var(--time);
+    animation-fill-mode: backwards;
+}
+@keyframes apper-page{
+    0%{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}
+@media (min-width:1024px){
+    #app header{  
+        padding: 1.2rem 11.2rem;
+    }
+    .container{
+        padding: 4rem 11.0rem;
+
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 3.4rem;
+
+    }
+    .items {
+        padding:0;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 3.4rem;
+    }
+
+    .header-section{
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
