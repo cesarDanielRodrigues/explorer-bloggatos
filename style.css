@@ -40,12 +40,7 @@ p, .input-wrapper input {
 #app {
     display: grid;
     grid-template-rows: max-content 1fr max-content;
-    height: 100vh;
-}
 
-.container {
-    width: 100%;
-    margin-inline: auto;
 }
 
 header {
@@ -113,14 +108,14 @@ header .avatar {
 
 main .capa {
     width: 100%;
-    border: no
 }
 
-main .container {
-    padding: 3.5rem 2.2rem 3.9rem;
+main section{
+    box-sizing: content-box;
+    padding: 3.3rem 2.5rem 0;
 }
 
-main .container h1 {
+main section h1 {
 
     font-size: 2.4rem;
     font-weight: 700;
@@ -128,7 +123,7 @@ main .container h1 {
 
 }
 
-main .container form {
+main section form {
     display: flex;
     gap: 1.2rem;
     margin-bottom: 3.1rem;
@@ -172,15 +167,11 @@ main .container form {
     outline: .3rem solid var(--color-checkbox-checked);
 }
 
-main .container p {
+main section p {
 
     font-weight: 400;
     line-height: 2.56rem;
 
-}
-
-.card h1 {
-    margin-block-start: 3.4rem;
 }
 
 .card {
@@ -195,14 +186,16 @@ main .container p {
     color: var();
 
     display: grid;
-    grid-template-areas:
+    grid-template:
         'img h1'
         'img p';
+    grid-template-columns: max-content 1fr;
 }
 
 .card a>img {
+    
     grid-area: img;
-    align-self: center;
+    place-self: center;
     margin-right: 1.6rem;
 }
 
@@ -210,6 +203,7 @@ main .container p {
     font-size: 18px;
     font-weight: 700;
     line-height: 2.88rem;
+
 }
 
 .card a>p {
@@ -217,7 +211,9 @@ main .container p {
     font-weight: 400;
     line-height: 2.24rem;
 }
-
+footer{
+    margin-top: 3.9rem;
+}
 footer p {
     background-color: var(--color-bc-footer);
 
@@ -259,3 +255,30 @@ footer{
     }
 }
 
+@media (min-width:768px){
+    header{
+        padding: 1.2rem 11.2rem;
+    }
+    main section{
+        padding: 0;
+    }
+    main{
+        padding: 4.4rem 10.9rem 3.9rem;
+        display: grid;
+        grid-template-areas: 
+        'A C'
+        'B C';
+        grid-template-rows: min-content min-content;
+        gap: 3.5rem;
+    }
+    main .capa{
+        grid-area: A;
+    }
+    main .matter{
+        grid-area: B;
+    }
+    main .card{
+        grid-area: C;
+        flex: 1;
+    }
+}
