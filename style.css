@@ -16,6 +16,7 @@
     --color-text-title: #202024;
     --color-p: #121214;
     --color-checkbox: #065E7C;
+    --color-checkbox-checked: #000000;
     --color-bc-footer: #387E96;
 
 }
@@ -125,8 +126,6 @@ main .container h1 {
     font-weight: 700;
     line-height: 3.84rem;
 
-    /* margin-bottom: .8rem; */
-
 }
 
 main .container form {
@@ -163,11 +162,13 @@ main .container form {
 }
 
 .input-checkbox input:checked+img {
-    background-color: black;
+    animation-name: button;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .input-checkbox input:focus+img {
-    outline: .3rem solid black;
+    outline: .3rem solid var(--color-checkbox-checked);
 }
 
 main .container p {
@@ -225,4 +226,9 @@ footer p {
     color: var(--color-text-white);
 
     text-align: center;
+}
+@keyframes button{
+    100%{
+        background-color: var(--color-checkbox-checked);
+    }
 }
