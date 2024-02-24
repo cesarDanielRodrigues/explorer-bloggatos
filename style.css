@@ -46,6 +46,7 @@ p,
     'container' 1fr
     'footer' max-content;
     height: 100vh;
+    
         
 }
 #app header{grid-area: header;}
@@ -112,6 +113,8 @@ header .avatar {
 }
 .container{
     overflow-y: scroll;
+    max-width: 1980px;
+    margin-inline: auto;
 }
 .items {
     padding: 3.2rem 2.4rem 0;
