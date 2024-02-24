@@ -159,12 +159,13 @@ main .container form {
     border-radius: 50%;
     width: 1.6rem;
     height: 1.6rem;
+
+    transition: background-color .6s ease-in-out;
 }
 
 .input-checkbox input:checked+img {
-    animation-name: button;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+
+    background-color: var(--color-checkbox-checked);
 }
 
 .input-checkbox input:focus+img {
@@ -227,8 +228,34 @@ footer p {
 
     text-align: center;
 }
-@keyframes button{
-    100%{
-        background-color: var(--color-checkbox-checked);
+/* animações */
+header{
+    --inicio:-100%;
+    animation: apper-header 1s; 
+}
+footer{
+    --inicio:100%;
+    animation: apper-header 1s; 
+}
+@keyframes apper-header{
+    from{
+        transform: translateY(var(--inicio));
     }
 }
+.capa, h1, .input-checkbox, p, a{
+    --time: .2s;
+    animation-name: apper-page;
+    animation-duration: .5s;
+    animation-delay: var(--time);
+    animation-fill-mode: backwards;
+}
+@keyframes apper-page{
+    0%{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}
+
