@@ -200,6 +200,7 @@ a > figure{
     align-items: center;
 }
 figure >img {
+    border-radius: 5px;
     place-self: center;
     width: 10.0rem;
 }
