@@ -193,13 +193,11 @@ a > figure{
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 1.6rem;
+    align-items: center;
 }
 figure >img {
     place-self: center;
-    max-width: 100%;
-
-
-
+    width: 10.0rem;
 }
 
 figure figcaption >h2 {
