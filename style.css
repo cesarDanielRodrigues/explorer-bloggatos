@@ -112,8 +112,10 @@ header .avatar {
     border-radius: 50%;
 }
 .container{
+    border: 1px solid red;
     overflow-y: scroll;
-    max-width: 1980px;
+    max-width: 100vw;
+    max-height: fit-content;
     margin-inline: auto;
 }
 .items {
@@ -170,13 +172,16 @@ main .header-section > form {
 .input-checkbox input:focus+img {
     outline: .3rem solid var(--color-checkbox-checked);
 }
-
+main{
+    max-height: max-content;
+}
 main section p {
     font-weight: 400;
     line-height: 2.56rem;
 }
 
 article {
+    height: max-content;
 
     display: flex;
     flex-direction: column;
@@ -187,7 +192,7 @@ article {
 
 article a {
     text-decoration: none;
-    color: var();
+    color: var(--color-p);
 }
 a > figure{
     display: grid;
@@ -225,13 +230,13 @@ footer p {
 /* animações */
 header{
     --inicio:-100%;
-    animation: apper-header 1s; 
+    animation: appear-header 1s; 
 }
 footer{
     --inicio:100%;
-    animation: apper-header 1s; 
+    animation: appear-header 1s; 
 }
-@keyframes apper-header{
+@keyframes appear-header{
     from{
         transform: translateY(var(--inicio));
     }
