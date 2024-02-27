@@ -174,6 +174,15 @@ main .header-section > form {
 main{
     max-height: max-content;
 }
+main .capa{
+    width: 100%;
+    height: 43.0rem;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+}
 main section p {
     font-weight: 400;
     line-height: 2.56rem;
@@ -203,6 +212,8 @@ figure >img {
     border-radius: 5px;
     place-self: center;
     width: 10.0rem;
+    height: 7.5rem;
+    object-fit: cover;
 }
 
 figure figcaption >h2 {
