@@ -1,6 +1,12 @@
 # Blog de Gatos
 
-Este é um projeto fictício de um blog de gatos, onde os usuários podem encontrar artigos interessantes e informações sobre esses felinos fascinantes.
+![GitHub repo size](https://img.shields.io/github/repo-size/cesarDanielRodrigues/explorer-bloggatos)
+![GitHub language count](https://img.shields.io/github/languages/count/cesarDanielRodrigues/explorer-bloggatos)
+
+![Demonstração da página](gif_github/paginaDemonstracao.gif)
+
+> Este é um projeto fictício de um blog de gatos, onde os usuários podem encontrar artigos interessantes e informações sobre esses felinos fascinantes. As imagens usadas são dos meus próprios gatos
+
 
 ## Estrutura do HTML
 
